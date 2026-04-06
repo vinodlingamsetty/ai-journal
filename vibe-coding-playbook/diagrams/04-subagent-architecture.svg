@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="shadow4" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arr4" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
+    </marker>
+    <marker id="arr4r" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#999"/>
+    </marker>
+  </defs>
+  
+  <!-- You -->
+  <rect x="360" y="15" width="160" height="50" rx="25" fill="#333" filter="url(#shadow4)"/>
+  <text x="440" y="46" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">You</text>
+  
+  <!-- Arrow: You to Main -->
+  <line x1="440" y1="65" x2="440" y2="100" stroke="#666" stroke-width="2" marker-end="url(#arr4)"/>
+  <text x="460" y="88" font-size="10" fill="#888">prompt</text>
+  
+  <!-- Main Agent -->
+  <rect x="250" y="105" width="380" height="100" rx="14" fill="#4a90a4" filter="url(#shadow4)"/>
+  <rect x="250" y="105" width="380" height="100" rx="14" fill="none" stroke="#3a7a8a" stroke-width="2"/>
+  <text x="440" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">MAIN AGENT</text>
+  <text x="440" y="158" text-anchor="middle" font-size="12" fill="#d0e8f0">Model: Sonnet (coding)</text>
+  <text x="440" y="178" text-anchor="middle" font-size="11" fill="#b0d0e0">Your context + CLAUDE.md + codebase</text>
+  
+  <!-- Delegate arrows down -->
+  <line x1="200" y1="205" x2="150" y2="290" stroke="#666" stroke-width="2" marker-end="url(#arr4)"/>
+  <line x1="440" y1="205" x2="440" y2="290" stroke="#666" stroke-width="2" marker-end="url(#arr4)"/>
+  <line x1="680" y1="205" x2="730" y2="290" stroke="#666" stroke-width="2" marker-end="url(#arr4)"/>
+  
+  <text x="145" y="252" font-size="10" fill="#888" text-anchor="middle">delegate:</text>
+  <text x="145" y="265" font-size="10" fill="#888" text-anchor="middle">security review</text>
+  <text x="440" y="252" font-size="10" fill="#888" text-anchor="middle">delegate:</text>
+  <text x="440" y="265" font-size="10" fill="#888" text-anchor="middle">write tests</text>
+  <text x="735" y="252" font-size="10" fill="#888" text-anchor="middle">delegate:</text>
+  <text x="735" y="265" font-size="10" fill="#888" text-anchor="middle">code review</text>
+  
+  <!-- Security Reviewer -->
+  <rect x="20" y="295" width="260" height="130" rx="12" fill="#b85450" filter="url(#shadow4)"/>
+  <text x="150" y="325" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">security-reviewer</text>
+  <text x="150" y="348" text-anchor="middle" font-size="11" fill="#f0d0d0">Model: Opus</text>
+  <text x="150" y="372" text-anchor="middle" font-size="11" fill="#f0c0c0">Tools: Read, Grep, Glob</text>
+  <text x="150" y="395" text-anchor="middle" font-size="11" fill="#f0c0c0">Mode: plan (read-only)</text>
+  <text x="150" y="415" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.3)">isolated context</text>
+  
+  <!-- Test Writer -->
+  <rect x="310" y="295" width="260" height="130" rx="12" fill="#5a9a5a" filter="url(#shadow4)"/>
+  <text x="440" y="325" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">test-writer</text>
+  <text x="440" y="348" text-anchor="middle" font-size="11" fill="#d0f0d0">Model: Sonnet</text>
+  <text x="440" y="372" text-anchor="middle" font-size="11" fill="#c0e0c0">Tools: Read, Grep, Edit, Bash</text>
+  <text x="440" y="395" text-anchor="middle" font-size="11" fill="#c0e0c0">Runs tests after writing</text>
+  <text x="440" y="415" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.3)">isolated context</text>
+  
+  <!-- Code Reviewer -->
+  <rect x="600" y="295" width="260" height="130" rx="12" fill="#6a5acd" filter="url(#shadow4)"/>
+  <text x="730" y="325" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">code-reviewer</text>
+  <text x="730" y="348" text-anchor="middle" font-size="11" fill="#d0c0f0">Model: Haiku</text>
+  <text x="730" y="372" text-anchor="middle" font-size="11" fill="#c0b0e0">Tools: Read, Grep, Glob</text>
+  <text x="730" y="395" text-anchor="middle" font-size="11" fill="#c0b0e0">Mode: plan (read-only)</text>
+  <text x="730" y="415" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.3)">isolated context</text>
+  
+  <!-- Return arrows -->
+  <line x1="185" y1="295" x2="330" y2="205" stroke="#999" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr4r)"/>
+  <line x1="440" y1="295" x2="440" y2="205" stroke="#999" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr4r)"/>
+  <line x1="695" y1="295" x2="550" y2="205" stroke="#999" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr4r)"/>
+  
+  <!-- Return labels -->
+  <text x="70" y="477" font-size="10" fill="#b85450">summary of findings</text>
+  <text x="365" y="477" font-size="10" fill="#5a9a5a">tests written + passing</text>
+  <text x="665" y="477" font-size="10" fill="#6a5acd">review notes</text>
+  
+  <!-- Bottom note -->
+  <rect x="30" y="450" width="820" height="50" rx="8" fill="#f0f2f5"/>
+  <line x1="30" y1="450" x2="30" y2="500" stroke="#4a90a4" stroke-width="4"/>
+  <text x="55" y="472" font-size="11" fill="#555" font-weight="600">Key: Each subagent gets a clean, isolated context. The main agent only sees the summary back,</text>
+  <text x="55" y="490" font-size="11" fill="#555">not the intermediate tool calls. This keeps your primary context uncluttered.</text>
+</svg>

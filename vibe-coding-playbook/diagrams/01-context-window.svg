@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer container -->
+  <rect x="10" y="10" width="860" height="300" rx="16" fill="#f8f9fb" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="440" y="42" text-anchor="middle" font-size="14" font-weight="700" fill="#555">CONTEXT WINDOW — finite, every token counts</text>
+  
+  <!-- Section A: System Prompt -->
+  <rect x="30" y="60" width="180" height="220" rx="12" fill="#4a90a4" filter="url(#shadow)"/>
+  <text x="120" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">System Prompt</text>
+  <text x="120" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">&amp; Tool Definitions</text>
+  <text x="120" y="185" text-anchor="middle" font-size="11" fill="#d0e8f0">fixed cost</text>
+  <text x="120" y="250" text-anchor="middle" font-size="28" fill="rgba(255,255,255,0.2)">A</text>
+  
+  <!-- Section B: CLAUDE.md -->
+  <rect x="230" y="60" width="180" height="220" rx="12" fill="#5a9a5a" filter="url(#shadow)"/>
+  <text x="320" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">CLAUDE.md /</text>
+  <text x="320" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">AGENTS.md</text>
+  <text x="320" y="185" text-anchor="middle" font-size="11" fill="#c0e0c0">loaded every session</text>
+  <text x="320" y="250" text-anchor="middle" font-size="28" fill="rgba(255,255,255,0.2)">B</text>
+  
+  <!-- Section C: Message History -->
+  <rect x="430" y="60" width="200" height="220" rx="12" fill="#c4a035" filter="url(#shadow)"/>
+  <text x="530" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Message History</text>
+  <text x="530" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">+ Actions &amp;</text>
+  <text x="530" y="162" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Observations</text>
+  <text x="530" y="197" text-anchor="middle" font-size="11" fill="#f0e0a0">grows each step</text>
+  <text x="530" y="250" text-anchor="middle" font-size="28" fill="rgba(255,255,255,0.2)">C</text>
+  
+  <!-- Arrow showing growth -->
+  <text x="612" y="175" font-size="18" fill="#c4a035">&#x25B6;</text>
+
+  <!-- Section D: Reasoning Space -->
+  <rect x="650" y="60" width="200" height="220" rx="12" fill="#b85450" filter="url(#shadow)"/>
+  <text x="750" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Agent Reasoning</text>
+  <text x="750" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Space</text>
+  <text x="750" y="177" text-anchor="middle" font-size="12" fill="#f0c0c0">what is LEFT</text>
+  <text x="750" y="197" text-anchor="middle" font-size="11" fill="#f0c0c0">for thinking</text>
+  <text x="750" y="250" text-anchor="middle" font-size="28" fill="rgba(255,255,255,0.2)">D</text>
+  
+  <!-- Squeeze arrow -->
+  <text x="632" y="175" font-size="18" fill="#b85450">&#x25C0;</text>
+</svg>

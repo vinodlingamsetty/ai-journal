@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="shadow5" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arr5" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
+    </marker>
+    <marker id="arr5b" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b85450"/>
+    </marker>
+    <marker id="arr5g" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5a9a5a"/>
+    </marker>
+  </defs>
+  
+  <!-- Step 1: Research -->
+  <rect x="340" y="15" width="200" height="70" rx="12" fill="#4a90a4" filter="url(#shadow5)"/>
+  <text x="440" y="45" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">RESEARCH</text>
+  <text x="440" y="65" text-anchor="middle" font-size="11" fill="#d0e8f0">Explore codebase, read docs</text>
+  
+  <!-- Arrow down -->
+  <line x1="440" y1="85" x2="440" y2="110" stroke="#666" stroke-width="2" marker-end="url(#arr5)"/>
+  
+  <!-- Step 2: Plan -->
+  <rect x="340" y="115" width="200" height="80" rx="12" fill="#6a5acd" filter="url(#shadow5)"/>
+  <text x="440" y="143" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">PLAN</text>
+  <text x="440" y="163" text-anchor="middle" font-size="11" fill="#d0c0f0">Plan mode, write spec.md</text>
+  <text x="440" y="180" text-anchor="middle" font-size="11" fill="#d0c0f0">Review with second model</text>
+  
+  <!-- Arrow down -->
+  <line x1="440" y1="195" x2="440" y2="220" stroke="#666" stroke-width="2" marker-end="url(#arr5)"/>
+  
+  <!-- Step 3: Execute -->
+  <rect x="340" y="225" width="200" height="80" rx="12" fill="#c4a035" filter="url(#shadow5)"/>
+  <text x="440" y="253" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">EXECUTE</text>
+  <text x="440" y="273" text-anchor="middle" font-size="11" fill="#f0e0a0">Focused, scoped prompts</text>
+  <text x="440" y="290" text-anchor="middle" font-size="11" fill="#f0e0a0">3-5 phases per feature</text>
+  
+  <!-- Arrow down -->
+  <line x1="440" y1="305" x2="440" y2="330" stroke="#666" stroke-width="2" marker-end="url(#arr5)"/>
+  
+  <!-- Step 4: Review -->
+  <rect x="340" y="335" width="200" height="80" rx="12" fill="#5a9a5a" filter="url(#shadow5)"/>
+  <rect x="340" y="335" width="200" height="80" rx="12" fill="none" stroke="#3d7a3d" stroke-width="2.5"/>
+  <text x="440" y="363" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">REVIEW</text>
+  <text x="440" y="383" text-anchor="middle" font-size="11" fill="#d0f0d0">Fresh context required!</text>
+  <text x="440" y="400" text-anchor="middle" font-size="11" fill="#d0f0d0">Writer/Reviewer pattern</text>
+  
+  <!-- Feedback loops from Review -->
+  <!-- Back to Plan: issues found -->
+  <path d="M 340 365 C 200 365, 200 155, 340 155" fill="none" stroke="#b85450" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr5b)"/>
+  <rect x="140" y="248" width="110" height="24" rx="4" fill="#b85450"/>
+  <text x="195" y="264" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Issues found</text>
+  
+  <!-- Back to Execute: errors -->
+  <path d="M 340 385 C 260 385, 260 265, 340 265" fill="none" stroke="#b85450" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr5b)"/>
+  <rect x="243" y="318" width="65" height="22" rx="4" fill="#b85450"/>
+  <text x="275" y="333" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Errors</text>
+  
+  <!-- Arrow down to Ship -->
+  <line x1="440" y1="415" x2="440" y2="435" stroke="#5a9a5a" stroke-width="2.5" marker-end="url(#arr5g)"/>
+  
+  <!-- Step 5: Ship -->
+  <rect x="340" y="440" width="200" height="50" rx="12" fill="#333" filter="url(#shadow5)"/>
+  <text x="440" y="470" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">SHIP</text>
+  
+  <!-- All clear label -->
+  <rect x="455" y="420" width="75" height="20" rx="4" fill="#5a9a5a"/>
+  <text x="492" y="434" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">All clear</text>
+  
+  <!-- Right side annotations -->
+  <rect x="600" y="340" width="255" height="70" rx="8" fill="#f0f2f5"/>
+  <line x1="600" y1="340" x2="600" y2="410" stroke="#5a9a5a" stroke-width="4"/>
+  <text x="620" y="362" font-size="11" fill="#555" font-weight="600">Review must use a fresh context.</text>
+  <text x="620" y="380" font-size="11" fill="#555">An agent reviewing its own code</text>
+  <text x="620" y="398" font-size="11" fill="#555">is biased toward what it just wrote.</text>
+  <line x1="540" y1="375" x2="598" y2="375" stroke="#5a9a5a" stroke-width="1.5" stroke-dasharray="4,3"/>
+</svg>
