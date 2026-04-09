@@ -10,6 +10,7 @@ A practical, opinionated guide to getting the best results from AI-assisted deve
 |---|---|
 | [**vibe-coding-playbook.md**](./vibe-coding-playbook.md) | The full guide — 14 sections from vision to production |
 | [**agent-instructions.md**](./agent-instructions.md) | Copy-paste blocks for CLAUDE.md / AGENTS.md / .cursorrules |
+| [**vibe-coders-stack.md**](./vibe-coders-stack.md) | Companion reference guide for AI-friendly MVP stack and tooling choices |
 | [**diagrams/**](./diagrams/) | 5 SVG diagrams embedded in the playbook |
 
 ## Who this is for
